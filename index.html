@@ -7,7 +7,9 @@
   <style>@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
   body{
       margin: 0;
-      background-color: #F4F4F4;
+      padding: 0;
+  height: 100vh;
+      background: linear-gradient(to right, #3FF8F5, #A8C0FF);
       font-family: Poppins;
   }
   :root{
@@ -116,9 +118,11 @@
       font-size: 4em;
       font-weight: 500;
   }
-  .carousel .list .item .introduce .des{
-      font-size: small;
-      color: #5559;
+  .carousel .list .item .introduce .des,
+  .carousel.showDetail .list .item:nth-child(2) .detail .des {
+      min-height: 150px; /* Adjust the height as needed */
+      height: auto;
+      overflow: auto; /* Ensures scrolling if content overflows */
   }
   .carousel .list .item .introduce .seeMore{
       font-family: Poppins;
@@ -378,7 +382,7 @@
       width: 500px;
       height: 300px;
       content: '';
-      background-image: linear-gradient(70deg, #DC422A, blue);
+      background-image: linear-gradient(70deg, #f32100, blue);
       position: absolute;
       z-index: -1;
       border-radius: 20% 30% 80% 10%;
@@ -452,7 +456,7 @@
             <img src="assets/images/hw.jpg">
             <div class="introduce">
                 <div class="title">COURSE 5</div>
-                <div class="topic">SPECIALIZATION IN COMPUTER HARDWARE</div>
+                <div class="topic">BIT AND CIRCUIT</div>
                 <div class="des">
                     Learning computer hardware equips you with the skills to maintain and repair computers, which is crucial in both personal and professional settings. It also opens career opportunities in IT support, hardware engineering, and technical troubleshooting, making it an essential skill in today’s technology-driven world.   </div>
                 <button class="seeMore">SEE MORE &#8599</button>
@@ -493,7 +497,7 @@
             <img src="assets/images/microsoft.jpeg">
             <div class="introduce">
                 <div class="title">COURSE1</div>
-                <div class="topic">MICROSOFT 365 WITH AI INTEGRATION</div>
+                <div class="topic">MICROSOFT 365 WITH AI</div>
                 <div class="des">
                     Mastering Microsoft Office improves efficiency, enhances job opportunities, and simplifies daily tasks, making it a must-have skill for students, professionals, and businesses.  </div>
                 <button class="seeMore">SEE MORE &#8599</button>
